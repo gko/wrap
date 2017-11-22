@@ -1,15 +1,18 @@
 {
     "name": "wrapSelection",
-    "displayName": "wrap selection",
+    "displayName": "Wrap Selection",
     "description": "wrap selection with combination of symbols",
-    "version": "0.5.2",
+    "version": "0.5.3",
     "publisher": "konstantin",
     "engines": {
         "vscode": "^1.18.0"
     },
     "categories": [
-        "Other"
-    ],
+		"Formatters",
+		"Keymaps",
+		"Other"
+	],
+	"icon": "icon.png",
     "activationEvents": [
         "onCommand:wrapSelection",
         "onCommand:wrapSelection.quote.single",
@@ -88,7 +91,7 @@
 			},
 			{
 				"command": "wrapSelection.bracket.round",
-				"key": "",
+				"key": ")",
 				"mac": ")",
 				"when": "editorHasSelection"
 			}
