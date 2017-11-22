@@ -2,7 +2,7 @@
     "name": "wrapSelection",
     "displayName": "wrap selection",
     "description": "wrap selection with combination of symbols",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "publisher": "konstantin",
     "engines": {
         "vscode": "^1.18.0"
@@ -105,5 +105,8 @@
         "@types/node": "^7.0.43",
         "typescript": "^2.6.1",
         "vscode": "^1.1.6"
-    }
+	},
+	"repository": {
+		"url": "https://github.com/gko/wrap"
+	}
 }
