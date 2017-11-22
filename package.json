@@ -1,0 +1,109 @@
+{
+    "name": "wrapSelection",
+    "displayName": "wrap selection",
+    "description": "wrap selection with combination of symbols",
+    "version": "0.5.1",
+    "publisher": "konstantin",
+    "engines": {
+        "vscode": "^1.18.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:wrapSelection",
+        "onCommand:wrapSelection.quote.single",
+        "onCommand:wrapSelection.quote.double",
+        "onCommand:wrapSelection.quote.french",
+		"onCommand:wrapSelection.bracket.square",
+		"onCommand:wrapSelection.bracket.round"
+    ],
+    "main": "out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "wrapSelection",
+                "title": "Wrap selected text"
+			},
+			{
+				"command": "wrapSelection.quote.single",
+				"title": "Wrap selected text with single quote"
+			},
+			{
+				"command": "wrapSelection.quote.double",
+				"title": "Wrap selected text with double quote"
+			}
+        ],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorTextFocus",
+					"command": "wrapSelection",
+					"group": "wrapSelection"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"command": "wrapSelection.quote.single",
+				"key": "'",
+				"mac": "'",
+				"when": "editorHasSelection"
+			},
+			{
+				"command": "wrapSelection.quote.double",
+				"key": "shift+'",
+				"mac": "shift+'",
+				"when": "editorHasSelection"
+			},
+			{
+				"command": "wrapSelection.quote.french",
+				"key": "«",
+				"mac": "«",
+				"when": "editorHasSelection"
+			},
+			{
+				"command": "wrapSelection.quote.french",
+				"key": "»",
+				"mac": "»",
+				"when": "editorHasSelection"
+			},
+			{
+				"command": "wrapSelection.bracket.square",
+				"key": "[",
+				"mac": "[",
+				"when": "editorHasSelection"
+			},
+			{
+				"command": "wrapSelection.bracket.square",
+				"key": "]",
+				"mac": "]",
+				"when": "editorHasSelection"
+			},
+			{
+				"command": "wrapSelection.bracket.round",
+				"key": "(",
+				"mac": "(",
+				"when": "editorHasSelection"
+			},
+			{
+				"command": "wrapSelection.bracket.round",
+				"key": "",
+				"mac": ")",
+				"when": "editorHasSelection"
+			}
+		]
+	},
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6"
+    }
+}
