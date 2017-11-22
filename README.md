@@ -10,7 +10,7 @@ or
 
 press `'`, `"`, `«`, `]`, `<` or `)` — both opening or closing symbol would work
 
-![features](features.gif)
+![features](https://github.com/gko/wrap/raw/master/features.gif)
 
 Through «Wrap selected text» you can also use multiple symbols, i.e.:
  - `{{` → `{{text}}`
