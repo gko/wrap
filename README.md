@@ -15,4 +15,4 @@ press `'`, `"`, `«`, `]`, `<` or `)` — both opening or closing symbol would w
 Through «Wrap selected text» you can also use multiple symbols, i.e.:
  - `{{` → `{{text}}`
  - `<!--` → `<!--text-->`
- - `<%` → `<%text%>
+ - `<%` → `<%text%>`
