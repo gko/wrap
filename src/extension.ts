@@ -62,7 +62,7 @@ export function activate(context: ExtensionContext) {
 			"wrapSelection.bracket.square",
 			() => {
 				const { activeTextEditor: editor } = window;
-				wrapSelection(editor, "]");
+				wrapSelection(editor, "[");
 			},
 		),
 	);
@@ -72,7 +72,7 @@ export function activate(context: ExtensionContext) {
 			"wrapSelection.bracket.round",
 			() => {
 				const { activeTextEditor: editor } = window;
-				wrapSelection(editor, ")");
+				wrapSelection(editor, "(");
 			},
 		),
 	);

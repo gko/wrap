@@ -1,32 +1,32 @@
 {
-    "name": "wrapSelection",
-    "displayName": "Wrap Selection",
-    "description": "wrap selection with combination of symbols",
-    "version": "0.5.4",
-    "publisher": "konstantin",
-    "engines": {
-        "vscode": "^1.18.0"
-    },
-    "categories": [
+	"name": "wrapSelection",
+	"displayName": "Wrap Selection",
+	"description": "wrap selection with combination of symbols",
+	"version": "0.5.6",
+	"publisher": "konstantin",
+	"engines": {
+		"vscode": "^1.18.0"
+	},
+	"categories": [
 		"Formatters",
 		"Keymaps",
 		"Other"
 	],
 	"icon": "icon.png",
-    "activationEvents": [
-        "onCommand:wrapSelection",
-        "onCommand:wrapSelection.quote.single",
-        "onCommand:wrapSelection.quote.double",
-        "onCommand:wrapSelection.quote.french",
+	"activationEvents": [
+		"onCommand:wrapSelection",
+		"onCommand:wrapSelection.quote.single",
+		"onCommand:wrapSelection.quote.double",
+		"onCommand:wrapSelection.quote.french",
 		"onCommand:wrapSelection.bracket.square",
 		"onCommand:wrapSelection.bracket.round"
-    ],
-    "main": "out/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "wrapSelection",
-                "title": "Wrap selected text"
+	],
+	"main": "out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "wrapSelection",
+				"title": "Wrap selected text"
 			},
 			{
 				"command": "wrapSelection.quote.single",
@@ -36,7 +36,7 @@
 				"command": "wrapSelection.quote.double",
 				"title": "Wrap selected text with double quote"
 			}
-        ],
+		],
 		"menus": {
 			"editor/context": [
 				{
@@ -97,17 +97,17 @@
 			}
 		]
 	},
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install"
-    },
-    "devDependencies": {
-        "@types/mocha": "^2.2.42",
-        "@types/node": "^7.0.43",
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6"
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^7.0.43",
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6"
 	},
 	"repository": {
 		"url": "https://github.com/gko/wrap"
