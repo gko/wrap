@@ -2,7 +2,7 @@
 	"name": "wrapSelection",
 	"displayName": "Wrap Selection",
 	"description": "wrap selection with combination of symbols",
-	"version": "0.5.6",
+	"version": "0.5.7",
 	"publisher": "konstantin",
 	"engines": {
 		"vscode": "^1.18.0"
@@ -12,6 +12,18 @@
 		"Keymaps",
 		"Other"
 	],
+	"keywords": [
+		"wrap",
+		"selection",
+		"vscode",
+		"quote",
+		"symbol",
+		"character"
+	],
+	"galleryBanner": {
+		"color": "#FFFFFF",
+		"theme": "dark"
+	},
 	"icon": "icon.png",
 	"activationEvents": [
 		"onCommand:wrapSelection",

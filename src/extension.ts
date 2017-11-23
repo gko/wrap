@@ -52,7 +52,7 @@ export function activate(context: ExtensionContext) {
 			"wrapSelection.quote.french",
 			() => {
 				const { activeTextEditor: editor } = window;
-				wrapSelection(editor, "»");
+				wrapSelection(editor, "«");
 			},
 		),
 	);
