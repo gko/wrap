@@ -2,7 +2,7 @@
 	"name": "wrapSelection",
 	"displayName": "Wrap Selection",
 	"description": "wrap selection with combination of symbols",
-	"version": "0.5.7",
+	"version": "0.5.8",
 	"publisher": "konstantin",
 	"engines": {
 		"vscode": "^1.18.0"
@@ -17,12 +17,11 @@
 		"selection",
 		"vscode",
 		"quote",
-		"symbol",
-		"character"
+		"symbol"
 	],
 	"galleryBanner": {
 		"color": "#FFFFFF",
-		"theme": "dark"
+		"theme": "light"
 	},
 	"icon": "icon.png",
 	"activationEvents": [
@@ -109,15 +108,35 @@
 			}
 		]
 	},
+	"jest": {
+		"coverageDirectory": "<rootDir>/coverage",
+		"coverageReporters": [
+			"html"
+		],
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js"
+		],
+		"transform": {
+			"^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+		},
+		"testMatch": [
+			"**/__tests__/*.(ts|tsx|js)"
+		]
+	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install"
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "jest --coverage"
 	},
 	"devDependencies": {
 		"@types/mocha": "^2.2.42",
 		"@types/node": "^7.0.43",
+		"husky": "^0.14.3",
+		"jest": "^21.2.1",
 		"typescript": "^2.6.1",
 		"vscode": "^1.1.6"
 	},

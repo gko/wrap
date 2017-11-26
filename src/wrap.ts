@@ -1,17 +1,38 @@
-const closingPattern = (pattern) => pattern.split("")
-		.reverse()
-		.map((ch) => {
-			switch (ch) {
-				case "{": return "}";
-				case "<": return ">";
-				case "«": return "»";
-				case "[": return "]";
-				case "(": return ")";
-				default: return ch;
-			}
-		})
-		.join("");
+const openingSymbol = (ch) => {
+	switch (ch) {
+		case "}": return "{";
+		case ">": return "<";
+		case "»": return "«";
+		case "]": return "[";
+		case ")": return "(";
+		default: return ch;
+	}
+};
 
-const wrap = (text, symbol) => `${symbol}${text}${closingPattern(symbol)}`;
+const closingSymbol = (ch) => {
+	switch (ch) {
+		case "{": return "}";
+		case "<": return ">";
+		case "«": return "»";
+		case "[": return "]";
+		case "(": return ")";
+		default: return ch;
+	}
+};
+
+const wrapPattern = (pattern) => {
+	return [
+		openingSymbol(pattern),
+		pattern.split("")
+			.reverse()
+			.map(closingSymbol)
+			.join(""),
+	];
+};
+
+const wrap = (text, symbol) => {
+	const [begin, end] = wrapPattern(symbol);
+	return `${begin}${text}${end}`;
+};
 
 export default wrap;
