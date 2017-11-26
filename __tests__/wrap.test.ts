@@ -59,19 +59,18 @@ describe("wrap", () => {
 
 		describe("should wrap with more complex pattern", () => {
 			it("should wrap with <!--", () => {
-				const wrappedText = wrap("test", "<!--");
-				assert.equal(wrappedText, "<!--test--!>");
+				assert.equal(wrap("test", "<!--"), "<!--test--!>");
 			});
 
 			it("should wrap with {{}}", () => {
-				const wrappedText = wrap("test", "{{");
-				assert.equal(wrappedText, "{{test}}");
+				assert.equal(wrap("test", "{{"), "{{test}}");
+				assert.equal(wrap("test", "}}"), "{{test}}");
 			});
 
-			// it("should wrap with {{}}", () => {
-			// 	const wrappedText = wrap("test", "}}");
-			// 	assert.equal(wrappedText, "{{test}}");
-			// });
+			it("should wrap with <%%>", () => {
+				// assert.equal(wrap("test", "<%"), "<%test%>");
+				assert.equal(wrap("test", "%>"), "<%test%>");
+			});
 		});
 	});
 

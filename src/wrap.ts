@@ -1,32 +1,43 @@
-const openingSymbol = (ch) => {
-	switch (ch) {
-		case "}": return "{";
-		case ">": return "<";
-		case "»": return "«";
-		case "]": return "[";
-		case ")": return "(";
-		default: return ch;
-	}
+const matchSymbol = {
+	close: {
+		"(": ")",
+		"<": ">",
+		"<%": "%>",
+		"[": "]",
+		"{": "}",
+		"{%": "%}",
+		"{{": "}}",
+		"{{{": "}}}",
+		"«": "»",
+	},
+	open: {
+		"%>": "<%",
+		"%}": "{%",
+		")": "(",
+		">": "<",
+		"]": "[",
+		"}": "{",
+		"}}": "{{",
+		"}}}": "{{{",
+		"»": "«",
+	},
 };
 
-const closingSymbol = (ch) => {
-	switch (ch) {
-		case "{": return "}";
-		case "<": return ">";
-		case "«": return "»";
-		case "[": return "]";
-		case "(": return ")";
-		default: return ch;
-	}
-};
+const closingSymbol = (ch) => matchSymbol.close[ch] || ch;
+const openingSymbol = (ch) => matchSymbol.open[ch] || ch;
 
 const wrapPattern = (pattern) => {
+	const patternDefined = matchSymbol.open.hasOwnProperty(pattern) ||
+		matchSymbol.close.hasOwnProperty(pattern);
+
 	return [
 		openingSymbol(pattern),
-		pattern.split("")
-			.reverse()
-			.map(closingSymbol)
-			.join(""),
+		patternDefined ?
+			closingSymbol(pattern) :
+			pattern.split("")
+				.reverse()
+				.map(closingSymbol)
+				.join(""),
 	];
 };
 
