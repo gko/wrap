@@ -68,7 +68,7 @@ describe("wrap", () => {
 			});
 
 			it("should wrap with <%%>", () => {
-				// assert.equal(wrap("test", "<%"), "<%test%>");
+				assert.equal(wrap("test", "<%"), "<%test%>");
 				assert.equal(wrap("test", "%>"), "<%test%>");
 			});
 		});
