@@ -130,7 +130,7 @@
 			"^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
 		},
 		"testMatch": [
-			"**/__tests__/*.(ts|tsx|js)"
+			"**/__tests__/*.(ts|tsx)"
 		]
 	},
 	"scripts": {
@@ -154,5 +154,6 @@
 	},
 	"repository": {
 		"url": "https://github.com/gko/wrap"
-	}
+	},
+	"license": "MIT"
 }

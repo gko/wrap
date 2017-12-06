@@ -1,5 +1,5 @@
 import * as assert from "assert";
-import wrap from "../src/wrap";
+import wrap from "../wrap";
 
 describe("wrap", () => {
 	describe("should correctly wrap text", () => {
