@@ -2,7 +2,7 @@
 	"name": "wrapSelection",
 	"displayName": "Wrap Selection",
 	"description": "wrap selection with combination of symbols",
-	"version": "0.6.1",
+	"version": "0.6.2",
 	"publisher": "konstantin",
 	"engines": {
 		"vscode": "^1.18.0"
@@ -15,7 +15,7 @@
 	"keywords": [
 		"wrap",
 		"selection",
-		"vscode",
+		"console",
 		"quote",
 		"symbol"
 	],

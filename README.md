@@ -20,6 +20,7 @@ Through «Wrap selected text» you can also use multiple symbols, i.e.:
  - `<%` → `<%text%>`
 
 ### Custom user patterns
+![user patterns](https://github.com/gko/wrap/raw/master/userDefined.gif)
 
 You can also do custom patterns through your settings:
 ``` json
