@@ -69,7 +69,14 @@ describe("wrap", () => {
 	});
 
 	describe("should correctly wrap with custom pattern", () => {
-		const wrappedText = wrap("test", "<div>");
-		assert.equal(wrappedText, "<div>test<div>");
+		it("wrap with log pattern", () => {
+			const wrappedText = wrap("test", "log");
+			assert.equal(wrappedText, "console.log(`test`, test)");
+		});
+
+		it("wrap with promise pattern", () => {
+			const wrappedText = wrap("test", "promise");
+			assert.equal(wrappedText, "new Promise((yeah, nah) => yeah(test))");
+		});
 	});
 });

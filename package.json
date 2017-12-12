@@ -2,7 +2,7 @@
 	"name": "wrapSelection",
 	"displayName": "Wrap Selection",
 	"description": "wrap selection with combination of symbols",
-	"version": "0.5.9",
+	"version": "0.6.1",
 	"publisher": "konstantin",
 	"engines": {
 		"vscode": "^1.18.0"
@@ -126,6 +126,9 @@
 			"tsx",
 			"js"
 		],
+		"moduleNameMapper": {
+			"vscode": "<rootDir>/src/__tests__/mocks/vscode.ts"
+		},
 		"transform": {
 			"^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
 		},
