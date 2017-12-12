@@ -4,7 +4,7 @@ This plugin allows you to wrap one or multiple selections with symbol/combinatio
 
 ## Usage
 
-Select something → ctrl+shift+p → «Wrap selected text»
+Select something → <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>P</kbd> → «Wrap selected text»
 
 or
 
@@ -33,7 +33,7 @@ You can also do custom patterns through your settings:
 }
 ```
 
-And then you can do <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>p</kbd> → «Wrap selected text» → log:
+And then you can do <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>P</kbd> → «Wrap selected text» → log:
 ```js
 selection
 ```
@@ -41,3 +41,7 @@ will become
 ```js
 console.log(`selection`, selection);
 ```
+
+## Found a bug?
+Create a ticket [here](https://github.com/gko/wrap/issues)
+or insult me at mail[at]konstantin[dot]io
