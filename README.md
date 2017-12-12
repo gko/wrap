@@ -8,7 +8,7 @@ Select something → ctrl+shift+p → «Wrap selected text»
 
 or
 
-press `'`, `"`, `«`, `]`, `<` or `)` — both opening or closing symbol would work
+press <kbd>'</kbd>, <kbd>"</kbd>, <kbd>«</kbd>, <kbd>]</kbd>, <kbd><</kbd> or <kbd>)</kbd> — both opening or closing symbol would work
 
 ![features](https://github.com/gko/wrap/raw/master/features.gif)
 
