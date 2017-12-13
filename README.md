@@ -1,6 +1,14 @@
 # Wrap selection
 
-This plugin allows you to wrap one or multiple selections with symbol/combination of symbols
+This plugin allows you to wrap one or multiple selections with symbol/combination of symbols.
+You can find it in [marketplace](https://marketplace.visualstudio.com/items?itemName=konstantin.wrapSelection)
+
+## Installation
+
+Launch VS Code Quick Open (<kbd>Ctrl</kbd>+<kbd>P</kbd>), paste the following command, and press enter:
+```bash
+ext install konstantin.wrapSelection
+```
 
 ## Usage
 
