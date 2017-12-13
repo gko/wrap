@@ -1,8 +1,7 @@
 import { workspace } from "vscode";
 
-const userPatterns = workspace.getConfiguration("wrapSelection.patterns");
-const userPattern = (text, pattern) => {
-	const escapedPattern = userPatterns[pattern].replace(/`/g, "\\`");
+const userPattern = (text, wrapPattern) => {
+	const escapedPattern = wrapPattern.replace(/`/g, "\\`");
 
 	try {
 		/* tslint:disable:no-eval */
@@ -16,10 +15,11 @@ const userPattern = (text, pattern) => {
 };
 
 const wrap = (text, pattern) => {
+	const userPatterns = workspace.getConfiguration("wrapSelection.patterns");
 	const isUserDefined = userPatterns.hasOwnProperty(pattern);
 
 	if (isUserDefined) {
-		return userPattern(text, pattern);
+		return userPattern(text, userPatterns[pattern]);
 	}
 
 	switch (pattern) {
