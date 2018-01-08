@@ -62,49 +62,49 @@
 				"command": "wrapSelection.quote.single",
 				"key": "'",
 				"mac": "'",
-				"when": "editorHasSelection"
+				"when": "editorTextFocus && editorHasSelection"
 			},
 			{
 				"command": "wrapSelection.quote.double",
 				"key": "shift+'",
 				"mac": "shift+'",
-				"when": "editorHasSelection"
+				"when": "editorTextFocus && editorHasSelection"
 			},
 			{
 				"command": "wrapSelection.quote.french",
 				"key": "«",
 				"mac": "«",
-				"when": "editorHasSelection"
+				"when": "editorTextFocus && editorHasSelection"
 			},
 			{
 				"command": "wrapSelection.quote.french",
 				"key": "»",
 				"mac": "»",
-				"when": "editorHasSelection"
+				"when": "editorTextFocus && editorHasSelection"
 			},
 			{
 				"command": "wrapSelection.bracket.square",
 				"key": "[",
 				"mac": "[",
-				"when": "editorHasSelection"
+				"when": "editorTextFocus && editorHasSelection"
 			},
 			{
 				"command": "wrapSelection.bracket.square",
 				"key": "]",
 				"mac": "]",
-				"when": "editorHasSelection"
+				"when": "editorTextFocus && editorHasSelection"
 			},
 			{
 				"command": "wrapSelection.bracket.round",
 				"key": "(",
 				"mac": "(",
-				"when": "editorHasSelection"
+				"when": "editorTextFocus && editorHasSelection"
 			},
 			{
 				"command": "wrapSelection.bracket.round",
 				"key": ")",
 				"mac": ")",
-				"when": "editorHasSelection"
+				"when": "editorTextFocus && editorHasSelection"
 			}
 		]
 	},
