@@ -1,4 +1,4 @@
-import { commands, ExtensionContext, TextEdit, window } from "vscode";
+import { commands, ExtensionContext, window } from "vscode";
 import wrap from "./wrap";
 
 const wrapSelection = (editor, symbol) => {
@@ -20,12 +20,23 @@ const wrapSelection = (editor, symbol) => {
 };
 
 export function activate(context: ExtensionContext) {
+
 	context.subscriptions.push(commands.registerCommand("wrapSelection", async () => {
 		const { activeTextEditor: editor } = window;
 
 		const symbol = await window.showInputBox({ placeHolder: "symbols" });
 		wrapSelection(editor, symbol);
 	}));
+
+	context.subscriptions.push(
+		commands.registerCommand(
+			"wrapSelection.pattern",
+			(symbol) => {
+				const { activeTextEditor: editor } = window;
+				wrapSelection(editor, symbol);
+			},
+		),
+	);
 
 	context.subscriptions.push(
 		commands.registerCommand(
