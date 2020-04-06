@@ -106,7 +106,16 @@
 				"mac": ")",
 				"when": "editorTextFocus && editorHasSelection"
 			}
-		]
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Wrap templates",
+			"properties": {
+				"wrapSelection.patterns": {
+					"type": "object"
+				}
+			}
+		}
 	},
 	"jest": {
 		"coverageDirectory": "<rootDir>/coverage",
