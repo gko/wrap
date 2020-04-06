@@ -49,6 +49,16 @@ export function activate(context: ExtensionContext) {
 
 	context.subscriptions.push(
 		commands.registerCommand(
+			"wrapSelection.quote.backtick",
+			() => {
+				const { activeTextEditor: editor } = window;
+				wrapSelection(editor, '`');
+			},
+		),
+	);
+
+	context.subscriptions.push(
+		commands.registerCommand(
 			"wrapSelection.quote.french",
 			() => {
 				const { activeTextEditor: editor } = window;

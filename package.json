@@ -65,6 +65,12 @@
 				"when": "editorTextFocus && editorHasSelection"
 			},
 			{
+				"command": "wrapSelection.quote.backtick",
+				"key": "`",
+				"mac": "`",
+				"when": "editorTextFocus && editorHasSelection"
+			},
+			{
 				"command": "wrapSelection.quote.double",
 				"key": "shift+'",
 				"mac": "shift+'",
