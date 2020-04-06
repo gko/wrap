@@ -2,7 +2,7 @@
 	"name": "wrapSelection",
 	"displayName": "Wrap Selection",
 	"description": "wrap selection with combination of symbols or your custom pattern",
-	"version": "0.6.8",
+	"version": "0.7.0",
 	"publisher": "konstantin",
 	"engines": {
 		"vscode": "^1.18.0"
