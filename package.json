@@ -26,6 +26,7 @@
 	"icon": "icon.png",
 	"activationEvents": [
 		"onCommand:wrapSelection",
+		"onCommand:wrapSelection.pattern",
 		"onCommand:wrapSelection.quote.single",
 		"onCommand:wrapSelection.quote.double",
 		"onCommand:wrapSelection.quote.french",
@@ -38,6 +39,10 @@
 			{
 				"command": "wrapSelection",
 				"title": "Wrap selected text"
+			},
+			{
+				"command": "wrapSelection.pattern",
+				"title": "Wrap selected text using custom pattern"
 			},
 			{
 				"command": "wrapSelection.quote.single",
