@@ -66,6 +66,15 @@ describe("wrap", () => {
 				assert.equal(wrap("test", "%}"), "{%test%}");
 			});
 		});
+
+		it("should wrap with $& replaced with the selections", () => {
+			// single $& get replaced to selected text
+			assert.equal(wrap("test", "f($&)"), "f(test)");
+			// replace multiple $&
+			assert.equal(wrap("test", "f($&, $&)"), "f(test, test)");
+			// check that $& $1 $2 in anywhere (except $& in replacement) are just replaced literally, i.e. no special expansion
+			assert.equal(wrap("(test) $& $1", "f($&) + $2"), "f((test) $& $1) + $2");
+		});
 	});
 
 	describe("should correctly wrap with custom pattern", () => {
