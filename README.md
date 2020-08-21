@@ -27,6 +27,11 @@ Through «Wrap selected text» you can also use multiple symbols, i.e.:
  - `<!--` → `<!--text-->`
  - `<%` → `<%text%>`
 
+### Instantly wrap text symmetrically or asymmetrically, e.g.:
+
+ - `***` → `***text***`
+ - `func($&)` → `func(text)`
+
 ### Custom user patterns
 ![user patterns](https://github.com/gko/wrap/raw/master/userDefined.gif)
 

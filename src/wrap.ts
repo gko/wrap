@@ -33,7 +33,14 @@ const wrap = (text, pattern) => {
 		case "{{{": case "}}}": return `{{{${text}}}}`;
 		case "«": case "»": return `«${text}»`;
 		case "<!--": case "--!>": return `<!--${text}--!>`;
-		default: return `${pattern}${text}${pattern}`;
+		default:
+			if (pattern.indexOf('$&') !== -1) {
+				// Perform non-symmetric selection wrapping.
+				// - "$&" is used as a placeholder for the selected text, e.g. wrap("text", "f($&, ...)") gives "f(text, ...)". Same placeholder as JavaScript's strings' replace().
+				// - Using "$&" but not "${text}" because the latter is too long to be used as an unsaved quick wrap expression.
+				return pattern.split('$&').join(text);
+			}
+			return `${pattern}${text}${pattern}`;
 	}
 };
 
