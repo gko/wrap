@@ -2,7 +2,7 @@
 	"name": "wrapSelection",
 	"displayName": "Wrap Selection",
 	"description": "wrap selection with combination of symbols or your custom pattern",
-	"version": "0.7.0",
+	"version": "0.8.0",
 	"publisher": "konstantin",
 	"engines": {
 		"vscode": "^1.18.0"
@@ -30,6 +30,7 @@
 		"onCommand:wrapSelection.quote.single",
 		"onCommand:wrapSelection.quote.double",
 		"onCommand:wrapSelection.quote.french",
+		"onCommand:wrapSelection.quote.backtick",
 		"onCommand:wrapSelection.bracket.square",
 		"onCommand:wrapSelection.bracket.round"
 	],
