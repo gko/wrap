@@ -29,6 +29,7 @@
 		"onCommand:wrapSelection.quote.single",
 		"onCommand:wrapSelection.quote.double",
 		"onCommand:wrapSelection.quote.french",
+		"onCommand:wrapSelection.quote.backtick",
 		"onCommand:wrapSelection.bracket.square",
 		"onCommand:wrapSelection.bracket.round"
 	],
