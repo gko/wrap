@@ -50,6 +50,29 @@ will become
 console.log(`selection`, selection);
 ```
 
+### Custom keyboard shortcuts
+
+Once you have defined a custom pattern, you can set up a keyboard shortcut to invoke it quickly.
+
+First, navigate to  `keybindings.json` with <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>P</kbd> → «Preferences: Open Keyboard Shortcuts (JSON)».
+
+Then, add an entry with your desired shortcut as `"key"` and with your pattern as  `"args"`.  For example:
+
+``` json
+    {
+        "key": "ctrl+alt+l",
+        "command": "wrapSelection.pattern",
+        "args":  "log",
+        "when": "editorHasSelection && editorTextFocus" 
+    }
+```
+
+
+
+
+
+
+
 ## Found a bug?
 Create a ticket [here](https://github.com/gko/wrap/issues)
 or insult me at mail[at]konstantin[dot]io
